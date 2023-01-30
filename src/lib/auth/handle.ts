@@ -5,6 +5,7 @@ import { GITHUB_ID, GITHUB_SECRET } from "$env/static/private";
 export default SvelteKitAuth({
 	callbacks: {
 		signIn: async ({ account, profile, user }) => {
+			throw new Error("test");
 			return true;
 		},
 		session: async ({ session }) => {
